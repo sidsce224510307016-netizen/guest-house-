@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Guest House Booking</title>
+
+<style>
+body{
+  font-family: Arial;
+  background:#f4f7ff;
+  margin:0;
+}
+
+header{
+  background:#2563eb;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+.container{
+  padding:20px;
+}
+
+.floor{
+  margin-bottom:30px;
+}
+
+.rooms{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.room{
+  padding:20px;
+  text-align:center;
+  border-radius:10px;
+  font-weight:bold;
+  cursor:pointer;
+  background:white;
+  border:2px solid #2563eb;
+}
+
+.room:hover{
+  background:#2563eb;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Guest House Room Booking</h1>
+<p>Select your room</p>
+</header>
+
+<div class="container">
+
+<div class="floor">
+<h2>Floor 1</h2>
+<div class="rooms">
+<div class="room" onclick="book('1-0-1')">101</div>
+<div class="room" onclick="book('1-0-2')">102</div>
+<div class="room" onclick="book('1-0-3')">103</div>
+<div class="room" onclick="book('1-0-4')">104</div>
+</div>
+</div>
+
+<div class="floor">
+<h2>Floor 2</h2>
+<div class="rooms">
+<div class="room" onclick="book('2-0-1')">201</div>
+<div class="room" onclick="book('2-0-2')">202</div>
+<div class="room" onclick="book('2-0-3')">203</div>
+<div class="room" onclick="book('2-0-4')">204</div>
+</div>
+</div>
+
+<div class="floor">
+<h2>Floor 3</h2>
+<div class="rooms">
+<div class="room" onclick="book('3-0-1')">301</div>
+<div class="room" onclick="book('3-0-2')">302</div>
+<div class="room" onclick="book('3-0-3')">303</div>
+<div class="room" onclick="book('3-0-4')">304</div>
+</div>
+</div>
+
+</div>
+
+<script>
+function book(room){
+  const formURL =
+  "https://script.google.com/macros/s/AKfycbyOkXZUmBXxFgokdgznID1CsWvGWeCC6Hc8T4XVbwf9BYe7YBZWsW3lPDXkdXuJcCxjxA/exec";
+  window.open(formURL,"_blank");
+}
+</script>
+
+</body>
+</html>
